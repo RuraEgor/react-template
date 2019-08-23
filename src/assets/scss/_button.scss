@@ -1,0 +1,38 @@
+.g-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+  background-color: #007bff;
+  border: 1px solid #ced4da;
+  min-height: 42px;
+  padding: 3px 10px;
+  transition: opacity 0.4s;
+  color: #ffffff;
+  border-radius: 5px;
+  min-width: 200px;
+
+  &:hover {
+	opacity: 0.8;
+  }
+
+  &:active {
+	opacity: 0.65;
+  }
+}
+
+.g-btn_bl {
+  display: block;
+  width: 100%;
+}
+
+.btn_author {
+
+}
+
+.btn_return {
+  float: right;
+  margin-left: 20px;
+}
