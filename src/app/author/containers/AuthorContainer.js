@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
-import setYearFunction from '../modules/action';
+import {addYear} from '../modules/action';
 import axios from 'axios';
 import Author from '../components/Author';
 import api from '../../../services/api';
@@ -93,12 +93,12 @@ function mapStateToProps(state) {
 	}
 }
 
-// function mapDispatchToProps(dispatch) {
-// 	return {
-// 		setYearFunction: (year) => {
-// 			dispatch(setYearAction(year))
-// 		}
-// 	}
-// }
+function mapDispatchToProps(dispatch) {
+	return {
+		addYear: (year) => {
+			dispatch(addYear(year))
+		}
+	}
+}
 
-export default connect(mapStateToProps)(AuthorContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(AuthorContainer);
